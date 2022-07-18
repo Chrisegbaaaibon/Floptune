@@ -373,10 +373,6 @@ input.error_active {
     margin-top: 7px;
 }
 
-.correct{
-    
-}
-
 @media (max-width: 600px) {
     .flopTuneHome__desktop {
         display: none;
