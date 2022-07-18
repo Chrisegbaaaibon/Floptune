@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    
+}
+
+.header > .logo{
+    max-width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#text1{
+    color: chartreuse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+#btn{
+    margin-top: 120px;
+    background-color: chartreuse;
+    margin-right: 400px;
+}
+
+#lorem{
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+#form-label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vw;
+    font-weight: bolder;
+    color: chartreuse;
+}
+
+#btn2{
+    box-shadow: 0 4px 8px 0 rgba(123, 190, 114, 0.2), 0 6px 20px 0 rgba(91, 156, 97, 0.19);
+    margin-right: 500px;
+}
+
+#btn2:hover{
+    background-color: rgb(209, 243, 176);
+    color: rgb(56, 55, 55);
+}
+
+#email{
+    background-image: url('gmail.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 40px;
+    border-radius: 1px solid chartreuse;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.img-fluid{
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#btn2{
+    background-color: chartreuse;
+    margin-top: 30px;
+    color: white;
+    border: none;
+}
+
+
+#h2{
+    color: chartreuse;
+}
+
+#FAQ{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#p{
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 1em;
+    padding-top: 30px;
+}
+
+#twitter{
+    max-width: 100%;
+    height: 30px;
+    margin: 8px;
+}
+
+#FAQ{
+    padding: 10px;
+    margin: 5px;
+}
+.flopTuneHome__modalOverlay {
+    background: var(--background);
+    background-blend-mode: darken;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flopTuneHome__modalBox {
+    width: 530px;
+    height: 60%;
+    background: var(--background);
+    border-radius: 8px;
+    color: #4a5049;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader {
+    border: 3px solid white;
+    border-top: 3px solid #187e04;
+    /* Blue */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+}
+
+  /* For tablet */
+@media screen and (min-width:768px) and (max-width:1024px)
+{
+    #text1{
+        margin-top: 80px;
+    }  
+    
+    #text2{
+        font-size: 3vw;
+    }
+
+    #btn{
+        position: relative;
+        right: 380px;
+        bottom: 150px;
+    }
+
+    #form-label{
+        margin-left: 150px;
+    }
+
+    #email{
+        width: 400px;
+        margin-left: 150px;
+    }
+
+    #btn2{
+        margin-right: 40px;
+    }
+}
+
+
+/* For laptop */
+@media screen and (min-width:1024px) and (max-width:1280px)
+{
+    #btn{
+        position: relative;
+        right: 510px;
+        bottom: 200px;
+    }
+
+    #email{
+        margin-left: 0px;
+    }
+}
+
+
+/*For large screen size*/
+@media screen and (min-width:1280px) and (max-width:1440px)
+{
+    #text1{
+         margin-top: 60px;
+    }
+
+    #text2{
+        font-size: 3vw;
+    }
+
+    #btn{
+        position: relative;
+        right: 610px;
+        bottom: 250px;
+    }
+
+    #form-label{
+        font-size: 3vw;
+    }
+
+}
+
+/*For extra large screens*/
+@media screen and (min-width:1440px) and (max-width:2560px)
+{
+    #text1{
+       margin-top: 100px;
+    }
+
+    #btn{
+        position: relative;
+        right: 735px;
+        bottom: 280px;
+    }
+
+    #form-label{
+        font-size: 2vw;
+    }
+}

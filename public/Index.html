@@ -1,175 +1,143 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flop Tune - First ever Streaming App from Nigeria</title>
-    <meta name="title" content="Connecting You with your Favourite Artiste">
-    <meta name="description" content="Flop tune, is a streaming app where artists can upload songs for free and fans get to download, streams and have a  connection with their favorite artists.
-    ">
-    <meta name="keywords"
-        content="Flop Tune , Music, streaming app, entertainments, Artiste, Music Platform, Promoting Music, Music Player App" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Connecting You with your Favourite Artiste">
-    <meta property="og:description"
-        content="Flop tune, is a streaming app where artists can upload songs for free and fans get to download, streams and have a  connection with their favorite artists.">
-    <meta property="og:image" content="images/logo.svg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Connecting You with your Favourite Artiste">
-    <meta property="twitter:description"
-        content="Flop tune, is a streaming app where artists can upload songs for free and fans get to download, streams and have a  connection with their favorite artists.">
-    <meta property="twitter:image" content="images/logo.svg">
-
-    <meta property="og:site_name" content="Flop-Tune">
-    <meta property="og:title" content="Connecting You with your Favourite Artiste">
-    <meta property="og:description"
-        content="Flop tune, is a streaming app where artists can upload songs for free and fans get to download, streams and have a  connection with their favorite artists.">
-    <meta property="og:image" content="/images/logo.svg">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/FlopTuneimg.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Flop.css">
+  <link rel="shortcut icon" href="b.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <title>Floptune</title>
 </head>
-
 <body>
-    <div class="flopTuneHome__mobile">
-        <a href="/" class="flopTuneHome__brandLogo">
-            <img src="images/Fore.jpeg" class="flopTuneHome__logo">
-        </a>
-        <section class="flopTuneHome__section1">
-            <div class="flopTuneHome__tagline">
-                <h1>Connecting You with your favourtie Artiste</h1>
-            </div>
+   <div class="header">
+    <img src="b.jpg" alt="logo" class="logo">
+   </div>
+   <div class="container-lg" data-aos="fade-in">
+    <div class="row justify-content-center">
+      <div class="col-md-5 text-center text-md-start">
+        <h1>
+          <div class="display-2" id="text1">Floptune</div>
+          <div class="display-4 text-muted" id="text2">Connecting You with your favourtie Artiste!<br> Join the waitlist today...</div>
+        </h1>
+      </div>
+      <div class="col-md-5 text-center d-block d-md-block mt-5" data-aos="fade-left">
+         <img src="phone.jpg" alt="logo" class="img-fluid">
+         <a href="#waitlist" class="btn btn-lg" id="btn">Join waitlist!</a>
+      </div>
+    </div>
+   </div>
 
-            <p class="flopTuneHome__desc">
-                Stream Your favour Artiste's Music for free and subscribe at a cheap rate for easy downloads..
-            </p>
-            <div class="int_1"></div>
-            <div class="int_1"></div>
-        </section>
-        <form class="flopTuneHome__form">
-            <input type="email" placeholder="enter your email address">
-            <div class="returnError" style="display: none;"></div>
-            <button type="submit">
-                Request Invite
-            </button>
-
+   <!--Waitlist form-->
+   <div class="container-lg" id="waitlist" data-aos="fade-left">
+     <div class="text-center">
+      <h2 class="display-6" id="lorem">Stream Your favour Artiste's Music for free and subscribe at a cheap rate for easy downloads...</h2>
+     </div>
+     <div class="row justify-content-center my-5">
+      <div class="col-lg-6">
+        <form action="" method="post" autocomplete="off">
+          <p class="return_error" style="color:red ;"></p>
+         <label for="email" class="form-label" id="form-label">Email:</label>
+         <input type="email" name="email" id="email" class="form-control" placeholder="e.g flop@example.com" required>
+         <div class=" text-center">
+          <button type="button" class="btn btn-lg" id="btn2">Request Access</button>
+         </div>
         </form>
-        <ul class="flopTuneHome__socialLinks">
-            <li>
-                <a href="https://twitter.com/FlopTune?s=20&t=TJVBy4UOkGMlnvvFFsJIgQ" target="_blank"><img src="images/twitter.svg"
-                        class="flopTuneHome__socialIcon"> </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/floptune/" target="_blank"> <img src="images/instagram.svg"
-                        class="flopTuneHome__socialIcon"></a>
-            </li>
-            <li>
-                <a href="https://facebook.comflop-\tune" target="_blank"> <img src="images/facebook.svg"
-                        class="flopTuneHome__socialIcon"></a>
-            </li>
-        </ul>
+      </div>
+     </div>
+   </div>
+
+   <!--FAQ-->
+   <h2 class="fw-bold text-center" id="h2">FAQ</h2>
+   <div class="accordion" id="FAQ">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+          Why the name Floptune?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#FAQ">
+        <div class="accordion-body">
+          <p>To be very honest,we don't know</p>
+        </div>
+      </div>
     </div>
-    <div class="flopTuneHome__desktop">
-        <div class="flopTuneHome__cover">
-            <img src="./images/Fore.jpeg" class="flopTuneHome__logo">
+      
+    <div class="accordion" id="FAQ">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+            When are you launching?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#FAQ">
+          <div class="accordion-body">
+            <p>Soon</p>
+          </div>
         </div>
-        <div class="flopTuneHome__topbar">
-            <a href="/" class="flopTuneHome__brandLogo">
-                <img src="./images/FlopTune.jpeg" class="flopTuneHome__logo">
-            </a>
-            <ul class="flopTuneHome__socialLinks">
-                <li>
-                    <a href="https://twitter.com/FlopTune" target="_blank">
-                        <img src="images/twitter.svg" class="flopTuneHome__socialIcon"></a>
-                    </a>
+      </div>
 
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/p/CYMUuJqsLdo/?utm_source=ig_web_copy_link" target="_blank">
-                        <img src="images/instagram.svg" class="flopTuneHome__socialIcon"></a>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://Facebook.com/Flop-Tune-107118798503041" target="_blank">
-                        <img src="images/facebook.svg" class="flopTuneHome__socialIcon"></a>
-                    </a>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="flopTuneHome__container">
-            <section class="section1">
-                <div class="flopTuneHome__tagline">
-                    <div class="flopTuneHome__tagline heading">
-                        <h2>
-                            <span class="flopTuneHome__headerText">Connecting You</span>
-
-                        </h2>
-                        <h2>
-                            <span class="flopTuneHome__headerText">with Your Favourite </span>
-
-                        </h2>
-                        <h2>
-                            <span class="flopTuneHome__headerText">Artiste</span>
-                        </h2>
-                    </div>  
-                </div>
-                <section class="section2">
-                    <p class="he">Stream Your favour Artiste's Music for free and subscribe at a cheap rate for easy
-                        downloads..
-                    </p>
-                </section>
-                <form class="border-search">
-                    <input type="email" placeholder="enter your email address">
-                    <button type="submit">
-                        Request Invite</button>
-                    <div class="returnError desktop" style="display: none;"></div>
-                </form>
-            </section>
-            <section class="flopTuneHome__smiletration">
-                <div class="smile">
-                    <img src="images/smile.svg" alt="">
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="flopTuneHome__modalOverlay" style="display: none;">
-        <div class="flopTuneHome__modalBox">
-            <h1>Congratulations!</h1>
-            <div class="flopTuneHome__modalMemojiContainer">
-                <img src="images/correct.svg" alt="Congratulations Memoji" />
+      <div class="accordion" id="FAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading-3">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="true" aria-controls="faq3">
+              What do i get when i go premium?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#FAQ">
+            <div class="accordion-body">
+              <p>A cool new ui, access to download and play music offline,sharing of subscription with friends and family and a lot more</p>
             </div>
-            <p>You have been added to the waitlist.</p>
-            <button class="flopTuneHome__modalCloseButton">Back</button>
+          </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script>
-        let tl = gsap.timeline({
-            defaults: {
-                ease: "SlowMo.easeOut"
-            }
-        })
-        tl.to('.flopTuneHome__cover', {
-            x: '100%',
-            duration: 3,
-            delay: 0.8
-        })
-        tl.to('.flopTuneHome__headerText', {
-            y: '0%',
-            duration: 0.65,
-            stagger: 0.2,
-        })
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
 
+        <div class="accordion" id="FAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-4">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="true" aria-controls="faq4">
+                How much does premium subscription?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#FAQ">
+              <div class="accordion-body">
+                <p>We can't disclose that for now,but we have different affordable Package to suit your pocket</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="FAQ">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-5">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="true" aria-controls="faq5">
+                  How does the end of the year wrap works?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#FAQ">
+                <div class="accordion-body">
+                  <p>At the end of the year, your top most played songs,albums and artists would be displayed as would a special feature which we call <b>matchup</b> which connects you with another user that has the same musical plays as you throughout the year</p>
+                </div>
+              </div>
+            </div>
+   </div>
+
+  
+    <div class="footer">
+      <p id="p">(c)Floptune,All rights reserved.</p>
+      <div class="container-lg">
+        <p class="text-center text-decoration-underline">Contact Us</p>
+      <a href="https://twitter.com/FlopTune?s=20&t=TJVBy4UOkGMlnvvFFsJIgQ"><img src="images/twitter.svg" alt="logo" id="twitter"></a>
+      <a href="https://www.instagram.com/floptune/"><img src="images/instagram.svg" alt="logo" id="twitter"></a>
+      <a href="https://facebook.comflop-\tune"><img src="images/facebook.svg" alt="logo" id="twitter"></a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./main.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
+</body>
 </html>

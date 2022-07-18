@@ -1,12 +1,10 @@
-const mobileFormButton = document.querySelector('.flopTuneHome__form button')
-const desktopFormButton = document.querySelector('.border-search button')
-const overlayContainer = document.querySelector('.flopTuneHome__modalOverlay')
-const closeButton = document.querySelector('.flopTuneHome__modalCloseButton')
-const btnsArray = [mobileFormButton, desktopFormButton]
+const buttonEl = document.querySelector('#btn2')
+const inputField = document.querySelector('#email')
+const errorField = document.querySelector('.return_error')
 
-
-const validate = async (buttonEl, inputField, errorField) => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
+  buttonEl.addEventListener('click', (e)=>{
+    e.preventDefault()
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
   if (inputField.value.length == 0) {
     inputField.classList.add('error_active')
     errorField.innerHTML = "Email Field can't be empty!🙄 "
@@ -29,13 +27,13 @@ const validate = async (buttonEl, inputField, errorField) => {
     try {
       
       buttonEl.innerHTML = '';
-      buttonEl.style.display = 'flex';
-      buttonEl.style.justifyContent = 'center';
-      buttonEl.style.alignItems = 'center';
       const newSpan = document.createElement('div')
       buttonEl.disabled = true
       newSpan.classList.add('loader')
       buttonEl.appendChild(newSpan)
+      buttonEl.style.display = 'block';
+      buttonEl.style.justifyContent = 'center';
+      buttonEl.style.alignItems = 'center';
       // Send Ajax for Email Operations https://floptune.herokuapp.com/api/addEmail
 			$.ajax({
 				url: "https://floptune.herokuapp.com/api/addEmail",
@@ -57,7 +55,9 @@ const validate = async (buttonEl, inputField, errorField) => {
 						}, 1500);
 					} else if (data.status == "200") {
 						inputField.value = "";
-						overlayContainer.style.display = "flex";
+            errorField.style.color = 'Green'
+            errorField.style.display = "block";
+						errorField.innerHTML = 'You have been added to the wait-list!😀'
 						buttonEl.innerHTML = "Request Access";
 						buttonEl.disabled = false;
 					}
@@ -69,26 +69,8 @@ const validate = async (buttonEl, inputField, errorField) => {
         alert('Something went wrong, Try Again Later', error)        
     }
     
-  }         
-}
+  }     
+  })
+  
 
-
-mobileFormButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  const mobileInput = document.querySelector('.flopTuneHome__form input')
-  const errorEl = document.querySelector('.returnError')    
-  validate(mobileFormButton, mobileInput, errorEl)  
-})
-
-
-desktopFormButton.addEventListener('click', (e) => {
-  e.preventDefault()
-  const desktopInput = document.querySelector('.border-search input')
-  const errorEl = document.querySelector('.returnError.desktop')  
-  validate(desktopFormButton, desktopInput, errorEl)
-})
-
-closeButton.addEventListener('click', () => {
-  overlayContainer.style.display = 'none'
-})
 
